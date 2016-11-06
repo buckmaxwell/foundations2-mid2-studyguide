@@ -1,61 +1,66 @@
 
-1.  (Heaps and Data Structure Analysis)
+# Midterm Sample, student work
 
-original = [55,47,26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7,15]
+## 1.  (Heaps and Data Structure Analysis)
 
-remove max element and set to max_key
-max_key = 55
+ + original = [55,47,26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7,15]
 
-make last element the first element
-A = [15,47, 26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
+ + remove max element and set to max_key
+	- max_key = 55
 
-now max_heapify the result
-j = 1
-done = False
+ + make last element the first element
+	- A = [15,47, 26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
 
-while not done:
-	
-	l = left(j)
-	r = right(j)
-	largest = j
+ + now max_heapify the result
+```
+	j = 1
+	done = False
 
-	if l <= len(A) and A[l] > A[largest]:
-		largest = l 
-	if r <= len(A) and A[r] > A[largest]:
-		largest = r # true
-	if j != largest:
-		A[largest], A[j] = A[j], A[largest]
-	else:
-		done = True
-	j = largest
+	while not done:
+		
+		l = left(j)
+		r = right(j)
+		largest = j
 
-[15,47,26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
+		if l <= len(A) and A[l] > A[largest]:
+			largest = l 
+		if r <= len(A) and A[r] > A[largest]:
+			largest = r # true
+		if j != largest:
+			A[largest], A[j] = A[j], A[largest]
+		else:
+			done = True
+		j = largest
 
-  1  2  3  4  5
-[47,15,26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
+	[15,47,26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
 
-  1  2  3  4  5  6  7  8  9 10 11 
-[47,42,26,33,15,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
+	  1  2  3  4  5
+	[47,15,26,33,42,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
 
-  1  2  3  4  5  6  7  8  9 10 11 12 131415 16 17 
-[47,42,26,33,38,24,17,31,14,15,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
-1819202122
+	  1  2  3  4  5  6  7  8  9 10 11 
+	[47,42,26,33,15,24,17,31,14,38,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
 
-  1  2  3  4  5  6  7  8  9 10 11 
-[47,42,26,33,38,24,17,31,14,19,16,11,20,1,5,12,23,13,8,15,6,3,2,4,7]
+	  1  2  3  4  5  6  7  8  9 10 11 12 131415 16 17 
+	[47,42,26,33,38,24,17,31,14,15,16,11,20,1,5,12,23,13,8,19,6,3,2,4,7]
+	1819202122
 
-                      47
-          42                       26
-     33          38          24          17
-  31    14    19    16    11    20    01    05
-12 23 13 08 15 06 03 02 04 07
+	  1  2  3  4  5  6  7  8  9 10 11 
+	[47,42,26,33,38,24,17,31,14,19,16,11,20,1,5,12,23,13,8,15,6,3,2,4,7]
+
+	                      47
+	          42                       26
+	     33          38          24          17
+	  31    14    19    16    11    20    01    05
+	12 23 13 08 15 06 03 02 04 07
+```
 
 GOOD WORK
 
 
-2. (Binary Search Trees)
+## 2. (Binary Search Trees)
 
-(a) Describe the algorithm to delete a node x from a binary search tree. (Describe just the five or six major steps in the algorithm)
+### (a) 
+Describe the algorithm to delete a node x from a binary search tree. (Describe just the five or six major steps in the algorithm)
 
 Case 1 -- x has no children
  + delete x
@@ -67,7 +72,8 @@ Case 3 -- x has 2 children
  + replace x with the successor of x, y which will be tree_min(x.right)
  + replace y with y.right
 
-(b) Give asymptotic bounds on the worst case running time of the algorithm in terms of the number of nodes and/or height of the tree.  Give bounds which are as tight and precise as possible.
+### (b)
+Give asymptotic bounds on the worst case running time of the algorithm in terms of the number of nodes and/or height of the tree.  Give bounds which are as tight and precise as possible.
 
 This will run in log(n) time.  In the worst case, the node replaced is the the root node, and has both left and right subtrees.  In this case, the deleted node will be replaced with it's successor -- the tree_min of the right subtree.  The running time of tree_min in the average case is log(n), but in the worst case, could be n -- if the tree is not well balanced.  Of course since there are at least 2 other nodes (the root and the left subtree), the worst case of our algorithm is n-2 + c, but that simplifies to n, leaving our worst case runtime as THETA(n).
 
@@ -102,7 +108,7 @@ def tree_delete(T, z):
 ```
 
 
-3. (Red Black Trees)
+## 3. (Red Black Trees)
 
 Apply RBTreeInsert to insert 18 in the following red-black tree and draw the resulting binary tree.
 Indicate which nodes are red or black in your drawing.  Be sure that the resulting tree has all the properties of a red-black tree.  SHOW YOUR WORK.
