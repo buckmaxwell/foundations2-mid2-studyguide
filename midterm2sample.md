@@ -54,8 +54,6 @@
 	12 23 13 08 15 06 03 02 04 07
 ```
 
-GOOD WORK
-
 
 ## 2. (Binary Search Trees)
 
