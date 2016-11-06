@@ -82,12 +82,12 @@ Tree Successor
  + The successor of a node is the next node in the inorder sequence
 
  Case I
- 	x.right != NULL:
- 		return TreeMin(x.right)
+ 	+ x.right != NULL:
+ 		- return TreeMin(x.right)
 
  Case II
- 	x.right == NULL:
- 		return closest ancestor y of x where x is in the left subtree of y
+ 	+ x.right == NULL:
+ 		- return closest ancestor y of x where x is in the left subtree of y
 
 
 
@@ -233,6 +233,7 @@ Node z has two children:
 
  Delete node x from the following tree
 
+```
      4
  3          20(x)
        09            42
@@ -240,6 +241,7 @@ Node z has two children:
                  27
                    31
                  30  35
+```
 
 
 Case III
@@ -252,13 +254,14 @@ Node x has two children.
 
 
 The new tree is then
-
+```
      4
  3          27
        09            42
      07  12        39  48
                  31
                30  35
+```
 
 
 Transplant
