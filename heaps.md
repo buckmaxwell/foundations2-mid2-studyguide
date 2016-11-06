@@ -1,26 +1,26 @@
-Heaps
------
+# Heaps
 
-# Priority Queues
+## Priority Queues
 
 Operations
-	D.Init()
-	D.Insert(x)
-	D.ExtractMax(x)
+ + D.Init()
+ + D.Insert(x)
+ + D.ExtractMax(x)
 
-# (Max) Heap
+## (Max) Heap
 
 Array Representation
 	[48, 42, 23, 17, 39, 20, 9, 12, 8, 34, 31, 14]
 	  1   2   3   4   5   6  7   8  9  10  11  12
 
 Tree
+```
                                  48
                             42         23
                          17    39   20    9
                         12 8 34 31 14 
-
-# Nearly Complete Binary Tree
+```
+## Nearly Complete Binary Tree
 
 Only nodes on the bottom right of tree are missing
 
@@ -34,12 +34,12 @@ def parent(i):
 def left(i):
 	"""i is the array/heap position, idx frm 1"""
 
-	return 2i
+	return 2*i
 
 def right(i):
 	"""i is the array/heap position, idx frm 1"""
 
-	return 2i + 1
+	return 2*i + 1
 ```
 
 
