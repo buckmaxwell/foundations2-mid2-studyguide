@@ -59,8 +59,7 @@ GOOD WORK
 
 ## 2. (Binary Search Trees)
 
-### (a) 
-Describe the algorithm to delete a node x from a binary search tree. (Describe just the five or six major steps in the algorithm)
+### (a) Describe the algorithm to delete a node x from a binary search tree. (Describe just the five or six major steps in the algorithm)
 
 Case 1 -- x has no children
  + delete x
@@ -72,8 +71,7 @@ Case 3 -- x has 2 children
  + replace x with the successor of x, y which will be tree_min(x.right)
  + replace y with y.right
 
-### (b)
-Give asymptotic bounds on the worst case running time of the algorithm in terms of the number of nodes and/or height of the tree.  Give bounds which are as tight and precise as possible.
+### (b)Give asymptotic bounds on the worst case running time of the algorithm in terms of the number of nodes and/or height of the tree.  Give bounds which are as tight and precise as possible.
 
 This will run in log(n) time.  In the worst case, the node replaced is the the root node, and has both left and right subtrees.  In this case, the deleted node will be replaced with it's successor -- the tree_min of the right subtree.  The running time of tree_min in the average case is log(n), but in the worst case, could be n -- if the tree is not well balanced.  Of course since there are at least 2 other nodes (the root and the left subtree), the worst case of our algorithm is n-2 + c, but that simplifies to n, leaving our worst case runtime as THETA(n).
 
