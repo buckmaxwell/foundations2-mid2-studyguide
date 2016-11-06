@@ -1,5 +1,7 @@
 # Heaps
 
+Note: Tamal's notes always index arrays from 1 in the heaps section.  This is not how python works so this code may have some off by one errors.  Please watch for this and treat this more as a way of showing of the concept than anything else.
+
 ## Priority Queues
 
 Operations
@@ -11,7 +13,6 @@ Operations
 
 Array Representation
 	[48, 42, 23, 17, 39, 20, 9, 12, 8, 34, 31, 14]
-	  1   2   3   4   5   6  7   8  9  10  11  12
 
 Tree
 ```
