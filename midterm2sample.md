@@ -108,6 +108,15 @@ def tree_delete(T, z):
 
 Apply RBTreeInsert to insert 18 in the following red-black tree and draw the resulting binary tree.
 Indicate which nodes are red or black in your drawing.  Be sure that the resulting tree has all the properties of a red-black tree.  SHOW YOUR WORK.
+```
+
+             10b
+      04b                41b
+    02b 07b          31         47b
+    b  b b b     16b     38b    b  b 
+               12  26   b  b
+              b  b b b
+```
 
 
 

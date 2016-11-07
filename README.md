@@ -10,6 +10,7 @@ These are some study materials for midterm2.  Please feel free to solve problems
 
  + [HEAPS](heaps.md)
  + [BINARY SEARCH TREES](bst.md)
+ + [RED BLACK TREES](redblack.md)
 
 ## Sample Midterm
  + [SAMPLE MIDTERM, with student work](midterm2sample.md)
