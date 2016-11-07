@@ -2,6 +2,8 @@
 
 # Red Black Trees
 
+![Image of a red and black tree](redblacktree.jpg)
+
 A *red-black tree* is a binary search tree with the following properties.
 
  + Every node is red or black
